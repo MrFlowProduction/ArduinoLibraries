@@ -1,0 +1,32 @@
+#######################################
+# Syntax Coloring Map for MrFlow Framework
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+ByteList		KEYWORD1
+IntList			KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+flow			KEYWORD2
+Remove			KEYWORD2
+Any				KEYWORD2
+IndexOf			KEYWORD2
+Count			KEYWORD2
+Clear			KEYWORD2
+Min				KEYWORD2
+Max				KEYWORD2
+Sum				KEYWORD2
+Avg				KEYWORD2
+Add				KEYWORD2
+PrintList		KEYWORD2
+
+
+#######################################
+# Constants (LITERAL2)
+#######################################

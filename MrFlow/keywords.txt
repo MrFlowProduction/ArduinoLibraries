@@ -1,0 +1,58 @@
+#######################################
+# Syntax Coloring Map for MrFlow Framework
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+MrFlow			KEYWORD1
+StateEvent		KEYWORD1
+Scheduler   	KEYWORD1
+EventHandler	KEYWORD1
+ByteList		KEYWORD1
+IntList			KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+flow			KEYWORD2
+event			KEYWORD2
+newState 		KEYWORD2
+changeState		KEYWORD2
+isChanged		KEYWORD2
+getValue 		KEYWORD2
+add				KEYWORD2
+init			KEYWORD2
+run				KEYWORD2
+runAll			KEYWORD2
+enable			KEYWORD2
+disable			KEYWORD2
+enableSchedule	KEYWORD2
+disableSchedule	KEYWORD2
+Remove			KEYWORD2
+Any				KEYWORD2
+IndexOf			KEYWORD2
+Count			KEYWORD2
+Clear			KEYWORD2
+Min				KEYWORD2
+Max				KEYWORD2
+Sum				KEYWORD2
+Avg				KEYWORD2
+Add				KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+
+YES 		LITERAL2
+NO	 		LITERAL2
+ON 			LITERAL2
+OFF 		LITERAL2
+LOCKED		LITERAL2
+UNLOCKED 	LITERAL2
+NOEVENT    	LITERAL2
+CTRLZ		LITERAL2
