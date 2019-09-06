@@ -49,6 +49,7 @@ void ADS1112::selectChannel(byte channel, byte gain, byte mode)
 	byte reg = 1 << BIT_ST_DRDY |
 			INP1 << BIT_INP1 |
 			INP0 << BIT_INP0 |
+			0 << BIT_SC |
 			1 << BIT_DR1 |
 			1 << BIT_DR0 |
 			gain;
@@ -60,19 +61,20 @@ void ADS1112::selectChannel(byte channel, byte gain, byte mode)
 
 double ADS1112::readADC()
 {
-  	Wire.requestFrom(I2C_ADDRESS, (byte) 3);
+  	Wire.requestFrom(I2C_ADDRESS, (byte) 3);	
+	
   	
 	int h = Wire.read();
   	int l = Wire.read();
   	int r = Wire.read();
   
-  	long t = h << 8 |  l;
+  	int t = h << 8 |  l;
 	
-	t = t * 1000;
+	//t = t * 1000;
   	
 	if (t >= 32768) t -= 65536l;
   	
-	double v = (double) t * 2.048/32768.0;
+	double v = (double) (t * (2048/32768.0));
 
 	return v;
 }
