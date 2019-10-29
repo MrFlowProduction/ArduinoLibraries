@@ -253,6 +253,9 @@ class OLEDDisplay : public Print {
     // Get screen geometry
     uint16_t getWidth(void);
     uint16_t getHeight(void);
+	
+	// Send a command to the display (low level function)
+    virtual void sendCommand(uint8_t com) {(void)com;};
 
     // Implement needed function to be compatible with Print class
     size_t write(uint8_t c);
@@ -287,8 +290,7 @@ class OLEDDisplay : public Print {
     uint16_t   logBufferMaxLines               = 0;
     char      *logBuffer                       = NULL;
 
-    // Send a command to the display (low level function)
-    virtual void sendCommand(uint8_t com) {(void)com;};
+    
 
     // Connect to the display
     virtual bool connect() { return false; };
