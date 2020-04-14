@@ -116,8 +116,6 @@ bool RFM69::initialize(uint8_t freqBand, uint16_t nodeID, uint8_t networkID)
   _settings = SPISettings(SPI_CLOCK_DIV4, MSBFIRST, SPI_MODE0);
 #endif
 
-	Serial.print(1);
-
   unsigned long start = millis();
   uint8_t timeout = 50;
   do writeReg(REG_SYNCVALUE1, 0xAA); while (readReg(REG_SYNCVALUE1) != 0xaa && millis()-start < timeout);
@@ -142,7 +140,6 @@ bool RFM69::initialize(uint8_t freqBand, uint16_t nodeID, uint8_t networkID)
   if (millis()-start >= timeout)
     return false;
   attachInterrupt(_interruptNum, RFM69::isr0, RISING);
- Serial.print(5);
   selfPointer = this;
   _address = nodeID;
 #if defined(RF69_LISTENMODE_ENABLE)
